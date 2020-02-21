@@ -1,5 +1,7 @@
 # Welcome Friend
 
+## forked from https://github.com/rmaclean/game-of-life-in-kotlin
+
 This repo is meant to be used in conjunction with my talk on Kotlin... I'll add details on that later 
 It is an implementation of Game of Life - I hope you find it useful.
 There are multiple branches:
