@@ -63,8 +63,8 @@ fun evolve() = (0 until rows).map { row ->
 // this main function runs the program and asks the user to specify the cols and rows
 // this main function also asks for a character for the cells ( what charcter is displayed )
 fun main(args: Array<String>) {
-   print("enter rows: and col: ")
-   val (a,b ) = readLine()!!.split(' ').map(String::toInt) 
+   print("enter rows: and col: generations:  ")
+   val (a,b,c ) = readLine()!!.split(' ').map(String::toInt) 
    println("enter the character for the cells" )
    val string = readLine()	
    obj = string.toString()   
@@ -72,11 +72,18 @@ fun main(args: Array<String>) {
    rows = a
    grid =  List(rows, { _ -> List(cols, { _ -> (0..5).random() == 0 }) })
    val console = Console()
+   var counter = 0
    while (true) {
        console.render(grid)
        grid = evolve()
        Thread.sleep(200)
-   }
+       counter++
+       if ( counter > c ) {
+	break	
+ 	}
+   } 
+
+
 }
 
 
